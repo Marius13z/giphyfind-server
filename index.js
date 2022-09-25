@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 // enable cross origin requests
 app.use(cors())
 
-app.use('https://gleeful-elf-0757dd.netlify.app/', gifsRoutes)
+app.use('https://gleeful-elf-0757dd.netlify.app', gifsRoutes)
 
 // connect to MongoDB
 mongoose.connect(process.env.CONNECTION_URL, { useUnifiedTopology: true, useNewUrlParser: true })
