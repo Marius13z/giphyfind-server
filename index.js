@@ -21,5 +21,5 @@ app.use('/', gifsRoutes)
 
 // connect to MongoDB
 mongoose.connect(process.env.CONNECTION_URL, { useUnifiedTopology: true, useNewUrlParser: true })
-    .then(() => app.listen(process.env.PORT, () => console.log('Server is running!')))
+    .then(() => app.listen(process.env.PORT || 5000, () => console.log('Server is running!')))
     .catch(error => console.log(error))
